@@ -1,0 +1,35 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/parser": "^7.14.9",
+    "@babel/traverse": "^7.14.9",
+    "@vue/compiler-dom": "^3.1.5",
+    "@webassemblyjs/ast": "^1.11.1",
+    "@webassemblyjs/wasm-parser": "^1.11.1",
+    "@zm-op/mfe-cli": "^1.0.0",
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "cross-spawn": "^7.0.3",
+    "ejs": "^3.1.6",
+    "execa": "^5.0.0",
+    "fs-extra": "^10.0.0",
+    "globby": "^11.0.3",
+    "inquirer": "^8.0.0",
+    "javascript-stringify": "^2.1.0",
+    "jscodeshift": "^0.12.0",
+    "pinyin_js": "^1.0.4",
+    "slash": "3.0.0",
+    "vue-codemod": "^0.0.5",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "devDependencies": {},
+  "description": ""
+}
