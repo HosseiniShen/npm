@@ -2,15 +2,23 @@
  * 营销管理后台微前端子应用配置
  */
 const APP_CONFIG = [// 转介绍管理平台
-  {
-    name: 'marketing-manage-platform',
-    // entry: 'http://localhost:8081',
-    activeRule: ({ hash }) => new RegExp('^#\/(referral|referralActivity)(\/.*)?$').test(hash),
+{
+  name: 'marketing-manage-platform',
+  // entry: 'http://localhost:8081',
+  activeRule: ({ hash }) => new RegExp('^#\/(referral|referralActivity)(\/.*)?$').test(hash),
+  props: {},
+  routes: require.context('../router/routes/referral', false, /\.js$/),
+  microSwitch: true
+}, {
+    name: 'app',
     props: {},
-    routes: require.context('../router/routes/referral', false, /\.js$/),
-    microSwitch: true
-  }
-]
+    entry: ''
+}, {
+    name: 'app',
+    activeRule: genActiveRule('app'),
+    props: {},
+    entry: ''
+}]
   
 if (process.env.NODE_ENV === 'testing') {
   const regExp = /^\/zm-operation-manage\/dev-(\d{1,5})\/?$/

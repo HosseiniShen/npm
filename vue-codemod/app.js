@@ -2,7 +2,8 @@ const fs = require('fs')
 const path = require('path')
 const { runTransformation } = require('vue-codemod')
 
-const targetPath = path.resolve(process.cwd(), './vue-codemod/app-config.js')
+const targetPath1 = path.resolve(process.cwd(), './vue-codemod/app-config.js')
+const targetPath = path.resolve(process.cwd(), './vue-codemod/routes.js')
 const source = fs.readFileSync(targetPath, 'utf-8')
 
 const ret = runTransformation(

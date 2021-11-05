@@ -11,7 +11,7 @@ const ret = runTransformation(
   getAST
 )
 console.log(ret)
-// fs.writeFileSync(targetPath, ret)
+fs.writeFileSync(targetPath, ret)
 
 function getAST ({ path, source }, api) {
   const j = api.jscodeshift
@@ -21,19 +21,15 @@ function getAST ({ path, source }, api) {
   let root
   const code = `const oo = {
     name: '${ name }',
-    activeRule: ({ hash }) => new RegExp('^#\\\\/(hello|crWorkbench)(\\\/.*)?(\\\\?.*)?$').test(hash),
+    activeRule: genActiveRule('${ name }'),
     props: {},
-    routes: require.context('../router/routes/app', false, /\.js$/),
-    microSwitch: true,
+    entry: ''
 }`
 
   const codeAst = j(code)
     .find(j.ObjectExpression)
-    // .insertBefore('\n')
-    // .insertAfter('\n')
     .get()
     .value
-    // .nodes()[0].program.body[0]
 
   try {
     root = j(source)

@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}\\babel\\index.js"
+      "program": "${workspaceFolder}\\babel\\v.js"
     }
   ]
 }
