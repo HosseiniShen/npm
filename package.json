@@ -22,6 +22,7 @@
     "execa": "^5.0.0",
     "fs-extra": "^10.0.0",
     "globby": "^11.0.3",
+    "immutable": "^4.0.0",
     "inquirer": "^8.0.0",
     "javascript-stringify": "^2.1.0",
     "jscodeshift": "^0.12.0",
